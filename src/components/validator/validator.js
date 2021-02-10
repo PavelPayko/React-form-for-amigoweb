@@ -1,5 +1,5 @@
 
-const usernameRegex = /^[a-zа-я -]{1,}$/i
+const usernameRegex = /^[a-zа-я -]+$/i
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i
 const numberRegex = /^[0-9()\-+]+$/i
 
@@ -25,11 +25,11 @@ export const validate = values => {
     }
 
     if (!values.language) {
-        errors.language = 'Поле не может быть пустым!';
+        errors.language = 'Required';
     }
 
     if (!values.termsAccept) {
-        errors.termsAccept = 'Согласие с условиями использования обязательно для регистрации';
+        errors.termsAccept = 'Required';
     }
 
     return errors;

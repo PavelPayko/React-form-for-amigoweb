@@ -12,7 +12,6 @@ const SignUpForm = () => {
 
     const terms = () => <span>Принимаю <a href="#">условия</a> соглашения</span>
 
-    // console.log(term, typeof term)
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -32,40 +31,48 @@ const SignUpForm = () => {
             <TextField title='Имя'
                        type='text'
                        name='name'
-                       value={formik.values.name}
-                       setValue={formik.handleChange}
-                       onBlur={formik.handleBlur}
                        placeholder='Введите Ваше имя'
+                       value={formik.values.name}
                        errors={formik.errors}
                        touched={formik.touched}
-            />
-            <TextField title='Email' type='email' name='email'
-                       value={formik.values.email} setValue={formik.handleChange}
-                       placeholder='Введите ваш email' errors={formik.errors}
                        onBlur={formik.handleBlur}
-                       touched={formik.touched}
+                       setValue={formik.handleChange}
             />
-            <TextField title='Номер телефона' type='text' name='tel'
-                       value={formik.values.tel} setValue={formik.handleChange}
+            <TextField title='Email'
+                       type='email'
+                       name='email'
+                       placeholder='Введите ваш email'
+                       value={formik.values.email}
+                       errors={formik.errors}
+                       touched={formik.touched}
+                       onBlur={formik.handleBlur}
+                       setValue={formik.handleChange}
+            />
+            <TextField title='Номер телефона'
+                       type='text'
+                       name='tel'
                        placeholder='Введите номер телефона'
+                       value={formik.values.tel}
                        errors={formik.errors}
-                       onBlur={formik.handleBlur}
                        touched={formik.touched}
+                       onBlur={formik.handleBlur}
+                       setValue={formik.handleChange}
             />
-            <Dropdown title='Язык' placeholder='язык' name='language'
+            <Dropdown title='Язык'
+                      placeholder='язык'
+                      name='language'
                       menuItems={languages}
-                      value={formik.values.language} setValue={formik.handleChange}
+                      value={formik.values.language}
                       errors={formik.errors}
-                      onBlur={formik.handleBlur}
-                      touched={formik.touched}
+                      setValue={formik.handleChange}
             />
-            <Checkbox label={terms} name='termsAccept'
-                      isChecked={formik.values.termsAccept} setValue={formik.handleChange}
+            <Checkbox label={terms}
+                      name='termsAccept'
+                      isChecked={formik.values.termsAccept}
+                      setValue={formik.handleChange}
                       errors={formik.errors}
-                      onBlur={formik.handleBlur}
-                      touched={formik.touched}
             />
-            <Button  title='Зарегестрироваться' disabled={!formik.isValid} />
+            <Button title='Зарегестрироваться' disabled={!formik.isValid} />
     </form>
 
 }

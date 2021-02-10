@@ -18,13 +18,15 @@ const Dropdown = props => {
     return (
         <div className={classes.dropdown}>
             <span className={classes.title}>{props.title}</span>
-            <Trigger value={props.value} placeholder={props.placeholder} isActiveToggle={isActiveToggleHandler}
-                     isActive={isActive}/>
-            <Menu setValueHandler={setValueHandler} isActive={isActive} menuItems={props.menuItems}/>
-            <span className={classes.error}>
-                {props.errors[props.name] && props.touched[props.name] ? <div>{props.errors[props.name]}</div> : null}
-            </span>
-
+            <Trigger value={props.value}
+                     placeholder={props.placeholder}
+                     isActiveToggle={isActiveToggleHandler}
+                     isActive={isActive}
+            />
+            <Menu setValueHandler={setValueHandler}
+                  isActive={isActive}
+                  menuItems={props.menuItems}
+            />
         </div>
     )
 

@@ -13,8 +13,12 @@ const Checkbox = (props) => {
     return (
         <div className={classes.wrapper}>
             <div className={classes.box + (props.isChecked ? ` ${classes.checked}` : '')}>
-                <input type="checkbox" name="acceptCheckbox" id="acceptCheckbox" className={classes.checkbox}
-                       onChange={checkHandler}/>
+                <input type="checkbox"
+                       name="acceptCheckbox"
+                       id="acceptCheckbox"
+                       className={classes.checkbox}
+                       onChange={checkHandler}
+                />
 
                 <label htmlFor="acceptCheckbox" className={classes.label}>
                     {props.isChecked &&
