@@ -1,0 +1,12 @@
+.dropdown {
+    width: 100%;
+    position: relative;
+    text-align: left;
+    margin-bottom: 34px;
+}
+.title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #756F86;
+}

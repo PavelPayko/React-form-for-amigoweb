@@ -1,0 +1,35 @@
+.trigger {
+    background: #FFFFFF;
+border: 1px solid #DBE2EA;
+box-sizing: border-box;
+box-shadow: 0 4px 8px rgba(44, 39, 56, 0.04);
+border-radius: 6px;
+width: 100%;
+height: 52px;
+padding: 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+color: #2C2738;
+    margin: 8px 0 4px 0;
+}
+
+.focus {
+    border: 2px solid #0880AE;
+}
+
+.title {
+    border: none;
+    background-color: inherit;
+    font-weight: normal;
+    font-size: 16px;
+    color: #2C2738;
+}
+
+.title::placeholder {
+
+    color: #7C9CBF;
+}

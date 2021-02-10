@@ -1,0 +1,29 @@
+.btn {
+    background: #0880AE;
+    box-shadow: 0 2px 4px rgba(44, 39, 56, 0.08), 0 4px 8px rgba(44, 39, 56, 0.08);
+    border-radius: 6px;
+    border: none;
+    height: 56px;
+    color: #EBF4F8;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 12px 24px rgba(44, 39, 56, 0.08), 0 24px 48px rgba(44, 39, 56, 0.16);
+}
+
+.btn:active {
+    border: 2px solid rgba(44, 39, 56, 0.86);
+    box-sizing: border-box;
+}
+
+.btn:disabled {
+    background: #DBE2EA;
+    box-shadow: 0 4px 8px rgba(44, 39, 56, 0.08);
+    color: #2C2738;
+}
