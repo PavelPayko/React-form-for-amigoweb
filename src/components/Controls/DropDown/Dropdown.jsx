@@ -9,10 +9,7 @@ const Dropdown = props => {
     const isActiveToggleHandler = () => isActiveToggle(!isActive)
 
     const setValueHandler = e => {
-        let event = e
-        event.target.value = e.target.innerText
-        event.target.name = props.name
-        props.setValue(event)
+        props.setValue(e)
         isActiveToggleHandler()
     }
     return (

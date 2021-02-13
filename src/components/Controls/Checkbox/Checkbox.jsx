@@ -4,12 +4,6 @@ import classes from './Checkbox.module.css'
 
 const Checkbox = (props) => {
 
-    const checkHandler = e => {
-        let event = e
-        event.target.value = e.target.checked
-        event.target.name = props.name
-        props.setValue(event)
-    }
     return (
         <div className={classes.wrapper}>
             <div className={classes.box + (props.isChecked ? ` ${classes.checked}` : '')}>
@@ -17,7 +11,7 @@ const Checkbox = (props) => {
                        name="acceptCheckbox"
                        id="acceptCheckbox"
                        className={classes.checkbox}
-                       onChange={checkHandler}
+                       onChange={props.setValue}
                 />
 
                 <label htmlFor="acceptCheckbox" className={classes.label}>
@@ -30,7 +24,7 @@ const Checkbox = (props) => {
                 </label>
 
             </div>
-            <div className={classes.title}>{props.label()}</div>
+            <div className={classes.title}>{props.label}</div>
         </div>
     )
 }
